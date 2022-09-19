@@ -4,18 +4,18 @@ public class LoanAccount {
     private double principal;
     private int months;
 
-    //parameters constructor for the attributes
+    //Constructor for the attributes
     public LoanAccount(double principle, double annualInterestRate, int months) {
         this.principal = principle;
         this.annualInterestRate = annualInterestRate;
         this.months = months;
     }
 
+    // Setter & Getters
     public double getAnnualInterestRate() {
         return annualInterestRate;
     }
 
-    // Constructors
     public void setAnnualInterestRate(double annualInterestRate) {
         this.annualInterestRate = annualInterestRate;
     }
@@ -38,15 +38,15 @@ public class LoanAccount {
 
     // Monthly Calculation Method
     public double calculateMonthlyPayment() {
-        double monthlyInterest = annualInterestRate / 12;
-        return principal * (monthlyInterest / (1 - Math.pow(1 + monthlyInterest, -getMonths())));
+        double monthlyInterest = (annualInterestRate/100) / 12;
+        return principal * (monthlyInterest / (1 - Math.pow(1 + monthlyInterest, -months)));
     }
 
     @Override
     public String toString() {
-        return "\nPrinciple: $" + principal +
-                "\nAnnual Interest Rate: " + annualInterestRate +
-                "%\nTerm of Loan in Months: " + months +
-                "\nMonthly Payment: $" + calculateMonthlyPayment();
+        return "\nPrinciple: $" + String.format("%.2f", principal) +
+                "\nAnnual Interest Rate: " + String.format("%.2f", annualInterestRate) + "%" +
+                "\nTerm of Loan in Months: " + months +
+                "\nMonthly Payment: $" + String.format("%.2f", calculateMonthlyPayment());
     }
 }
