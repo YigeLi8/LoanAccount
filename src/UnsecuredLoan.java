@@ -6,10 +6,7 @@ public class UnsecuredLoan extends LoanAccount{
 
     @Override
     public String toString() {
-        return "\nUnsecured Loan with:" +
-                "\nPrinciple: $" + super.getPrincipal() +
-                "\nAnnual Interest Rate: " + super.getAnnualInterestRate() +
-                "%\nTerm of Loan in Months: " + super.getMonths() +
-                "\nMonthly Payment: $" + calculateMonthlyPayment();
+        return "\n" + "\nUnsecured Loan with:" +
+                super.toString();
     }
 }

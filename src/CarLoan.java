@@ -10,10 +10,7 @@ public class CarLoan extends LoanAccount{
     @Override
     public String toString() {
         return "Car Loan with: " +
-                "\nPrincipal: " + super.getPrincipal() +
-                "\nAnnual Interest Rate: " + super.getAnnualInterestRate() +
-                "\nTerm of Loan in Months: " + super.getMonths() +
-                "\nMonthly Payment: $" + calculateMonthlyPayment() +
+                super.toString() +
                 "\nVehicle VIN: " + vehicleVIN;
     }
 }

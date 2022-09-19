@@ -1,3 +1,10 @@
+/***
+ * Yige Li
+ * CMPSC 221
+ * Loan Account Hierarchy
+ * 19 Sep 2022
+ */
+
 public class main {
     public static void main(String[] args) {
         // Create three different loan objects, one of each type.

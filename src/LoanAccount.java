@@ -1,9 +1,7 @@
 public class LoanAccount {
 
     private double annualInterestRate;
-
     private double principal;
-
     private int months;
 
     //parameters constructor for the attributes
@@ -41,15 +39,14 @@ public class LoanAccount {
     // Monthly Calculation Method
     public double calculateMonthlyPayment() {
         double monthlyInterest = annualInterestRate / 12;
-        double monthlyPayment = principal * (monthlyInterest / (1 - Math.pow(1 + monthlyInterest, -getMonths())));
-        System.out.println("/////////////" + getMonths());
-        return monthlyPayment;
+        return principal * (monthlyInterest / (1 - Math.pow(1 + monthlyInterest, -getMonths())));
     }
 
     @Override
     public String toString() {
         return "\nPrinciple: $" + principal +
                 "\nAnnual Interest Rate: " + annualInterestRate +
-                "%\nTerm of Loan in Months: " + months;
+                "%\nTerm of Loan in Months: " + months +
+                "\nMonthly Payment: $" + calculateMonthlyPayment();
     }
 }

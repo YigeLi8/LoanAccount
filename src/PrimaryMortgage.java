@@ -12,12 +12,9 @@ public class PrimaryMortgage extends LoanAccount{
 
     @Override
     public String toString() {
-        return "\nPrimary Mortgage Loan with: " +
-                "\nPrinciple: $" + super.getPrincipal() +
-                "\nAnnual Interest Rate: " + super.getAnnualInterestRate() +
-                "%\nTerm of Loan in Months: " + super.getMonths() +
+        return "\n" + "\nPrimary Mortgage Loan with: " +
+                super.toString() +
                 "\nPMI Monthly Amount: $" + PMIMonthlyAmount +
-                "\nMonthly Payment: $" + calculateMonthlyPayment() +
                 address.toString();
     }
 }
