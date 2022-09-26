@@ -7,6 +7,6 @@ public class UnsecuredLoan extends LoanAccount{
     @Override
     public String toString() {
         return "\n" + "\nUnsecured Loan with:" +
-                super.toString();
+                super.toString() + "\n";
     }
 }
